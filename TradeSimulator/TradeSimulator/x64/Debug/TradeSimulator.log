@@ -1,0 +1,9 @@
+﻿  TradeSimulator.c
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(134,24): warning C4476: 'printf' : 서식 지정자에 알 수 없는 형식 필드 문자 '%'이(가) 있습니다.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(47,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(146,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(157,13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(161,17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(184,13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\TradeSimulator\TradeSimulator.c(188,17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  TradeSimulator.vcxproj -> C:\Users\첨단분야 혁신융합대학사업단\Desktop\TradeSimulator\x64\Debug\TradeSimulator.exe
