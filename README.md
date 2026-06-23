@@ -1,52 +1,79 @@
-# Console Crypto Trading Simulator (C, Windows)
+# 💰 Crypto Trading Simulator
 
-A simple **console-based crypto trading simulator** written in **C (Windows)**.  
-Coin prices change randomly over time, and users can **buy/sell coins** while tracking **cash, total assets, and portfolio performance**.
+> **콘솔 기반 가상화폐 모의 거래 시뮬레이터** — C로 작성된 Windows 콘솔 가상화폐 거래 시뮬레이터입니다. 코인 가격이 시간에 따라 무작위로 변동하며, 사용자는 코인을 사고팔면서 현금, 총 자산, 포트폴리오 수익률을 추적할 수 있습니다.
 
-## Features
-- 5 custom coins: `SDJ`, `LSO`, `PDH`, `ADH`, `JIH`
-- Random price movement per refresh (range: **-100 ~ +100**)
-- Real-time portfolio display:
-  - Total assets (cash + holdings)
-  - Remaining cash
-  - Coin price table with:
-    - current price
-    - day-over-day % change
-    - day-over-day price change
-- Buy / Sell system
-- Average buy price tracking (`totalCost / quantity`)
-- Profit & profit rate calculation (per holding)
-- Colorized output:
-  - **Red** for 상승(+)
-  - **Blue** for 하락(-)
-  - **Yellow** for portfolio lines
-- Delisting rule:
-  - If a coin price becomes near 0 (`<= 0.000001`), the coin is removed from the list
+---
 
-## How it Works
-1. User inputs **initial assets**
-2. Program repeatedly:
-   - clears screen
-   - updates each coin price (random change)
-   - prints tables & portfolio status
-   - asks user to choose:
-     - **1) Buy**
-     - **2) Sell**
-     - **3) Exit**
-3. After each action, the program waits **1 second** (`Sleep(1000)`)
+## 📌 프로젝트 개요
 
-## Build (Windows)
+5종의 가상 코인 가격이 매 갱신마다 무작위로 변동하는 환경에서, 사용자가 매수/매도를 반복하며 자산을 운용하는 콘솔 기반 모의 거래 프로그램입니다. 실시간으로 총 자산, 보유 현금, 코인별 시세와 수익을 확인할 수 있습니다.
 
-This project uses:
-- `windows.h` (for `Sleep()` and console colors)
-- `system("cls")` for screen clearing
+---
 
-### Option 1) Visual Studio (Recommended)
-1. Create a **Console App (C)** project
-2. Paste the code into `main.c`
-3. Build & Run
+## ✨ 주요 기능
 
-### Option 2) MinGW (GCC) on Windows
+| 기능 | 설명 |
+|------|------|
+| 5종 코인 | SDJ, LSO, PDH, ADH, JIH |
+| 무작위 가격 변동 | 갱신마다 -100 ~ +100 범위로 시세 변동 |
+| 실시간 포트폴리오 | 총 자산(현금 + 보유분), 보유 현금 표시 |
+| 시세 테이블 | 현재가, 전일 대비 변동률(%), 전일 대비 변동액 표시 |
+| 매수 / 매도 | 평균 매수가 추적(총매입액 / 수량) |
+| 수익 계산 | 보유 코인별 수익 및 수익률 계산 |
+| 색상 출력 | 상승(+) 빨강, 하락(-) 파랑, 포트폴리오 노랑 |
+| 상장폐지 규칙 | 코인 가격이 0에 근접(<= 0.000001) 시 목록에서 제거 |
+
+---
+
+## 🏗️ 동작 방식
+
+```
+[초기 자산 입력]
+       |
+       v
+  +---------------------------+
+  | 화면 초기화 (system("cls")) |
+  | 각 코인 가격 갱신 (무작위)    |
+  | 시세 테이블 + 포트폴리오 출력  |
+  | 사용자 선택:                 |
+  |   1) 매수  2) 매도  3) 종료   |
+  | 동작 후 1초 대기 (Sleep)     |
+  +---------------------------+
+       | (반복)
+```
+
+1. 사용자가 초기 자산을 입력
+2. 화면 초기화 → 코인 가격 무작위 갱신 → 시세/포트폴리오 출력
+3. 매수 / 매도 / 종료 중 선택
+4. 각 동작 후 1초 대기(Sleep(1000)) 후 반복
+
+---
+
+## 🛠️ 기술 스택
+
+| 분류 | 기술 |
+|------|------|
+| 언어 | C |
+| 플랫폼 | Windows |
+| 주요 API | windows.h (Sleep(), 콘솔 색상), system("cls") |
+
+---
+
+## 🚀 빌드 방법 (Windows)
+
+### 방법 1) Visual Studio (권장)
+1. 콘솔 앱(C) 프로젝트 생성
+2. 코드를 main.c에 붙여넣기
+3. 빌드 후 실행
+
+### 방법 2) MinGW (GCC)
 ```bash
 gcc main.c -o trading_sim.exe
 ./trading_sim.exe
+```
+
+---
+
+## 👤 개발자
+
+- **tlsrhkr7** (Dongjun Shin) — 오픈소스기초프로젝트
